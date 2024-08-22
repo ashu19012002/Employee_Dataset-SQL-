@@ -4,6 +4,7 @@ SELECT *FROM employee
 SELECT *FROM employeedetail
 
 --Q1(a): Find the list of employees whose salary ranges between 2L to 3L.
+
 SELECT EmpName, Salary FROM Employee
 WHERE Salary > 200000 AND Salary < 300000
 --- OR –--
@@ -20,3 +21,9 @@ WHERE E1.City = E2.City AND E1.salary != E2.salary
 
 SELECT * FROM employee
 WHERE empid IS NULL
+
+--Q2(a): Query to find the cumulative sum of employee’s salary.
+
+SELECT EmpID, Salary, SUM(Salary) OVER (ORDER BY EmpID) AS CumulativeSum
+FROM Employee
+
