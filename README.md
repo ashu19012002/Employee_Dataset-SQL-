@@ -28,3 +28,8 @@ SELECT EmpID, Salary, SUM(Salary) OVER (ORDER BY EmpID) AS CumulativeSum
 FROM Employee
 
 --Q2(b): What’s the male and female employees ratio.
+
+SELECT
+(COUNT(*) FILTER (WHERE Gender = 'M') * 100.0 / COUNT(*)) AS MalePct,
+(COUNT(*) FILTER (WHERE Gender = 'F') * 100.0 / COUNT(*)) AS FemalePct
+FROM Employee;
