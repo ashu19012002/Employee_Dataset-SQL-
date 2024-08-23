@@ -27,3 +27,4 @@ WHERE empid IS NULL
 SELECT EmpID, Salary, SUM(Salary) OVER (ORDER BY EmpID) AS CumulativeSum
 FROM Employee
 
+--Q2(b): What’s the male and female employees ratio.
