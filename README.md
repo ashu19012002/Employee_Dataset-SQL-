@@ -33,3 +33,17 @@ SELECT
 (COUNT(*) FILTER (WHERE Gender = 'M') * 100.0 / COUNT(*)) AS MalePct,
 (COUNT(*) FILTER (WHERE Gender = 'F') * 100.0 / COUNT(*)) AS FemalePct
 FROM Employee;
+
+--Q3: Query to fetch the employee’s salary but replace the LAST 2 digits with ‘XX’ 
+i.e 12345 will be 123XX
+
+SELECT Salary, 
+CONCAT(LEFT(Salary, LEN(Salary)-2), 'XX') as masked_salary
+FROM Employee
+SELECT Salary, 
+CONCAT(SUBSTRING(Salary::text, 1, LENGTH(Salary::text)-2), 'XX') as masked_number
+FROM Employee
+--- OR –--
+SELECT Salary, CONCAT(LEFT(CAST(Salary AS text), LENGTH(CAST(Salary AS text))-2), 'XX') 
+AS masked_number
+FROM Employee
