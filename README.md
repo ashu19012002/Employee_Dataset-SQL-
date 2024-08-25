@@ -57,4 +57,4 @@ WHERE MOD(EmpID,2)=0;
 SELECT * FROM Employee 
 WHERE MOD(EmpID,2)=1;
 
-
+--OR
