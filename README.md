@@ -58,3 +58,16 @@ SELECT * FROM Employee
 WHERE MOD(EmpID,2)=1;
 
 --OR
+
+---Fetch even rows
+SELECT * FROM 
+(SELECT *, ROW_NUMBER() OVER(ORDER BY EmpId) AS 
+RowNumber
+FROM Employee) AS Emp
+WHERE Emp.RowNumber % 2 = 0
+---Fetch odd rows
+SELECT * FROM 
+(SELECT *, ROW_NUMBER() OVER(ORDER BY EmpId) AS 
+RowNumber
+FROM Employee) AS Emp
+WHERE Emp.RowNumber % 2 = 1
