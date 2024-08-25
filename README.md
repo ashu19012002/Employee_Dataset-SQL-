@@ -47,3 +47,14 @@ FROM Employee
 SELECT Salary, CONCAT(LEFT(CAST(Salary AS text), LENGTH(CAST(Salary AS text))-2), 'XX') 
 AS masked_number
 FROM Employee
+
+--Q4: Write a query to fetch even and odd rows from Employee table.
+
+---Fetch even rows
+SELECT * FROM Employee 
+WHERE MOD(EmpID,2)=0;
+---Fetch odd rows
+SELECT * FROM Employee 
+WHERE MOD(EmpID,2)=1;
+
+
