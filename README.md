@@ -78,3 +78,9 @@ Begin with ‘A’
 • Contains ‘Y’ alphabet at second last place
 • Ends with ‘L’ and contains 4 alphabets 
 • Begins with ‘V’ and ends with ‘A’
+
+SELECT * FROM Employee WHERE EmpName LIKE 'A%';
+SELECT * FROM Employee WHERE EmpName LIKE '_a%';
+SELECT * FROM Employee WHERE EmpName LIKE '%y_';
+SELECT * FROM Employee WHERE EmpName LIKE '____l';
+SELECT * FROM Employee WHERE EmpName LIKE 'V%a'
