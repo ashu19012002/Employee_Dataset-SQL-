@@ -73,4 +73,8 @@ FROM Employee) AS Emp
 WHERE Emp.RowNumber % 2 = 1
 
 Q5(a): Write a query to find all the Employee names whose name:
-
+Begin with ‘A’
+• Contains ‘A’ alphabet at second place
+• Contains ‘Y’ alphabet at second last place
+• Ends with ‘L’ and contains 4 alphabets 
+• Begins with ‘V’ and ends with ‘A’
