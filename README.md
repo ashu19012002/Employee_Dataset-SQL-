@@ -71,3 +71,6 @@ SELECT * FROM
 RowNumber
 FROM Employee) AS Emp
 WHERE Emp.RowNumber % 2 = 1
+
+Q5(a): Write a query to find all the Employee names whose name:
+
