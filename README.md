@@ -84,3 +84,5 @@ SELECT * FROM Employee WHERE EmpName LIKE '_a%';
 SELECT * FROM Employee WHERE EmpName LIKE '%y_';
 SELECT * FROM Employee WHERE EmpName LIKE '____l';
 SELECT * FROM Employee WHERE EmpName LIKE 'V%a'
+
+Q5(b): Write a query to find the list of Employee names which is:
